@@ -1,0 +1,17 @@
+{
+  "name": "nom_tracker",
+  "description": "",
+  "main": "",
+  "authors": [
+    "sp <sampeppard@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/sampeppard/nom_tracker",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
