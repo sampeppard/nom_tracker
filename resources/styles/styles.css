@@ -13,6 +13,12 @@ header {
   color: beige;
 }
 
+.add-meals {
+  border-radius: 10px;
+  background-color: tomato;
+  color:beige;
+}
+
 footer {
   position: fixed;
   bottom: 0;

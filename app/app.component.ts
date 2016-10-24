@@ -8,6 +8,8 @@ import { Meal } from './meal.model';
       <h1>NOM Tracker</h1>
     </header>
     <div class="container">
+      <br>
+      <br>
       <div class="row">
         <div class="col-sm-6 tracked-meals">
           <br>
