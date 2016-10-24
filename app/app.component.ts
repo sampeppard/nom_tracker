@@ -8,12 +8,16 @@ import { Meal } from './meal.model';
       <h1>NOM Tracker</h1>
     </header>
     <div class="container">
-      <div *ngFor="let currentMeal of MasterMealList">
-      <h5>{{ currentMeal.name }}</h5>
-        <ul>
-          <li>{{ currentMeal.details }}</li>
-          <li>{{ currentMeal.calories }}</li>
-        </ul>
+      <div class="row">
+        <div class="col-sm-6 tracked-meals">
+          <br>
+          <h1>Your Daily Meals</h1>
+          <br>
+          <meal-list
+            [childMealList]="MasterMealList"
+            (clickSender)="showDetails($event)"
+          ></meal-list>
+        </div>
       </div>
     </div>
     <footer>
@@ -24,8 +28,12 @@ import { Meal } from './meal.model';
 
 export class AppComponent {
   public MasterMealList: Meal[] = [
-    new Meal(0, "Fajitas", "Lean chicken", 850),
-    new Meal(1, "Burger", "Made with lean ground turkey", 500),
-    new Meal(2, "Chicken Tika Masala", "Lean chicken", 750)
+    new Meal(1, "Fajitas", "Lean chicken", 850),
+    new Meal(2, "Burger", "Made with lean ground turkey", 500),
+    new Meal(3, "Chicken Tika Masala", "Lean chicken", 750)
   ];
+  selectedMeal: Meal = null;
+  showDetails(clickedMeal: Meal) {
+    this.selectedMeal = clickedMeal;
+  }
 }
