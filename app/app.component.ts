@@ -14,9 +14,17 @@ import { Meal } from './meal.model';
           <h1>Your Daily Meals</h1>
           <br>
           <meal-list
-            [childMealList]="MasterMealList"
+            [childMealList]="masterMealList"
             (clickSender)="showDetails($event)"
           ></meal-list>
+        </div>
+        <div class="col-sm-6 add-meals">
+          <br>
+          <h1>Add Meals</h1>
+          <br>
+          <new-meal
+            (newMealSender)="addMeal($event)"
+          ></new-meal>
         </div>
       </div>
     </div>
@@ -27,7 +35,7 @@ import { Meal } from './meal.model';
 })
 
 export class AppComponent {
-  public MasterMealList: Meal[] = [
+  public masterMealList: Meal[] = [
     new Meal(1, "Fajitas", "Lean chicken", 850),
     new Meal(2, "Burger", "Made with lean ground turkey", 500),
     new Meal(3, "Chicken Tika Masala", "Lean chicken", 750)
@@ -35,5 +43,8 @@ export class AppComponent {
   selectedMeal: Meal = null;
   showDetails(clickedMeal: Meal) {
     this.selectedMeal = clickedMeal;
+  }
+  addMeal(newMealAdded: Meal) {
+    this.masterMealList.push(newMealAdded);
   }
 }
