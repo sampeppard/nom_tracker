@@ -4,6 +4,7 @@
 #
 ##### By [Sam Peppard](https://github.com/sampeppard)
 #
+![screenshot of project main page](resources/images/demo-screenshot.jpg)
 
 ----
 ### **Description**
@@ -29,6 +30,7 @@ Link to GitHub pages site:
 If editing:
 * Clone this repository: https://github.com/sampeppard/nom_tracker.git
 * OPEN project folder ('nom_tracker') in Code Editor of choice
+--then--
 * Run following commands from command line
 * 1. npm install
 * 2. bower install
