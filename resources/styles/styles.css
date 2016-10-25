@@ -9,22 +9,34 @@ header {
   width: 100%;
   padding: 20px;
   font-family: 'Montserrat Subrayada', sans-serif;
-  background-color: tomato;
+  background-color: teal;
   color: beige;
+}
+
+.container {
+  margin-bottom: 300px;
 }
 
 .add-meals {
   border-radius: 10px;
-  background-color: tomato;
-  color:beige;
+  background-color: teal;
+  color: beige;
+}
+
+.edit-meal {
+  padding: 0 15px 15px 15px;
+  border-radius: 10px;
+  background-color: teal;
+  color: beige;
 }
 
 footer {
   position: fixed;
   bottom: 0;
+  margin-top: 100px;
   width: 100%;
   padding: 10px 0;
   text-align: center;
-  background-color: tomato;
+  background-color: teal;
   color: beige;
 }

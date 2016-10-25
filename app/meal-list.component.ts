@@ -6,7 +6,7 @@ import { Meal } from './meal.model';
   template: `
   <div *ngFor="let currentMeal of childMealList">
     <meal-display [meal]="currentMeal"></meal-display>
-    <button class="btn">Edit</button>
+    <button class="btn btn-xs" (click)="editButtonClicked(currentMeal)">Edit</button>
   </div>
   `
 })
@@ -14,4 +14,9 @@ import { Meal } from './meal.model';
 export class MealListComponent {
   @Input() childMealList: Meal[];
   @Output() clickSender = new EventEmitter();
+
+  editButtonClicked(mealToEdit: Meal) {
+    this.clickSender.emit(mealToEdit);
+  }
+
 }

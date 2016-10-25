@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from "@angular/core";
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { Meal } from './meal.model';
 
 @Component({
@@ -6,8 +6,6 @@ import { Meal } from './meal.model';
   template: `
     <form>
       <div class="form-group">
-        <label>Enter New Meal ID:</label>
-        <input class="form-control" #newId>
         <label>Enter New Meal Name:</label>
         <input class="form-control" #newName>
         <label>Enter New Meal Details:</label>
@@ -16,7 +14,7 @@ import { Meal } from './meal.model';
         <input class="form-control" type="number" #newCalories>
       </div>
       <br>
-      <button class="btn btn-success" (click)="addClicked(newId.value, newName.value, newDetails.value, newCalories.value);
+      <button class="btn btn-success" (click)="addClicked(newName.value, newDetails.value, newCalories.value);
         newId.value='';
         newName.value='';
         newDetails.value='';
@@ -27,9 +25,10 @@ import { Meal } from './meal.model';
 })
 
 export class NewMealComponent {
+  @Input() childMealList: Meal[];
   @Output() newMealSender = new EventEmitter();
-  addClicked(id: number, name: string, details: string, calories: number) {
-    var newMeal: Meal = new Meal(id, name, details, calories);
+  addClicked(name: string, details: string, calories: number) {
+    var newMeal: Meal = new Meal(name, details, calories);
     this.newMealSender.emit(newMeal);
   }
 }

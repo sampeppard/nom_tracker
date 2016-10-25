@@ -14,11 +14,17 @@ import { Meal } from './meal.model';
         <div class="col-sm-6 tracked-meals">
           <br>
           <h1>Your Daily Meals</h1>
+          <h3>Meal Amount: {{ masterMealList.length }}</h3>
           <br>
           <meal-list
             [childMealList]="masterMealList"
             (clickSender)="showDetails($event)"
           ></meal-list>
+          <br>
+          <edit-meal
+            [childSelectedMeal]="selectedMeal"
+            (doneClickedSender)="finshedEditing()"
+          ></edit-meal>
         </div>
         <div class="col-sm-6 add-meals">
           <br>
@@ -38,13 +44,16 @@ import { Meal } from './meal.model';
 
 export class AppComponent {
   public masterMealList: Meal[] = [
-    new Meal(1, "Fajitas", "Lean chicken", 850),
-    new Meal(2, "Burger", "Made with lean ground turkey", 500),
-    new Meal(3, "Chicken Tika Masala", "Lean chicken", 750)
+    new Meal("Fajitas", "Lean chicken", 850),
+    new Meal("Burger", "Made with lean ground turkey", 500),
+    new Meal("Chicken Tikka Masala", "Lean chicken", 750)
   ];
   selectedMeal: Meal = null;
   showDetails(clickedMeal: Meal) {
     this.selectedMeal = clickedMeal;
+  }
+  finshedEditing() {
+    this.selectedMeal = null;
   }
   addMeal(newMealAdded: Meal) {
     this.masterMealList.push(newMealAdded);
