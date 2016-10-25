@@ -17,6 +17,10 @@ header {
   margin-bottom: 300px;
 }
 
+.list-group {
+  margin: 5px 0;
+}
+
 .add-meals {
   border-radius: 10px;
   background-color: teal;
@@ -28,6 +32,18 @@ header {
   border-radius: 10px;
   background-color: teal;
   color: beige;
+}
+
+.listed-meal {
+  margin: 5px 0;
+}
+
+.meal, .meal-number {
+  display: inline;
+}
+
+.meal {
+  margin-right: 5px;
 }
 
 footer {
