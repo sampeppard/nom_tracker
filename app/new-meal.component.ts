@@ -15,7 +15,6 @@ import { Meal } from './meal.model';
       </div>
       <br>
       <button class="btn btn-success" (click)="addClicked(newName.value, newDetails.value, newCalories.value);
-        newId.value='';
         newName.value='';
         newDetails.value='';
         newCalories.value='';

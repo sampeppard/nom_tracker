@@ -4,7 +4,14 @@ import { Meal } from './meal.model';
 @Component({
   selector: "meal-list",
   template: `
-  <div *ngFor="let currentMeal of childMealList">
+  <p>Filter meals by caloric amount.</p>
+  <select class="form-control" (change)="onCalorieChange($event.target.value)">
+    <option value="all">All Meals</option>
+    <option value="high-calorie">High Calorie Meals</option>
+    <option value="low-calorie">Low Calorie Meals</option>
+  </select>
+  <br>
+  <div *ngFor="let currentMeal of childMealList | calorieFilter:filteredCalories">
     <div class="listed-meal">
       <p class="meal-number">{{childMealList.indexOf(currentMeal) + 1}}.  </p>
       <meal-display [meal]="currentMeal"></meal-display>
@@ -18,9 +25,12 @@ import { Meal } from './meal.model';
 export class MealListComponent {
   @Input() childMealList: Meal[];
   @Output() clickSender = new EventEmitter();
-
+  public filteredCalories = "all";
   editButtonClicked(mealToEdit: Meal) {
     this.clickSender.emit(mealToEdit);
+  }
+  onCalorieChange(calorieInput) {
+    this.filteredCalories = calorieInput;
   }
 
 }
