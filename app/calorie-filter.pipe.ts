@@ -8,6 +8,6 @@ import { Meal } from './meal.model';
 
 export class CalorieFilter implements PipeTransform {
   transform(input: Meal[]) {
-    
+    var output: Meal = [];
   }
 }

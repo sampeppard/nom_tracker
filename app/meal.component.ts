@@ -4,7 +4,11 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'meal-display',
   template: `
-  <h5 class="meal" (click)="showDetails()">{{ meal.name }}<span *ngIf="display === false"> | click to display more info | </span><span *ngIf="display === true"> | click to hide info </span></h5>
+  <h5 class="meal">{{ meal.name }}</h5>
+  <button class="btn btn-xs" (click)="showDetails()">
+    <span *ngIf="display === false">View More Info</span>
+    <span *ngIf="display === true">Hide Info</span>
+  </button>
   <ul class="list-group" *ngIf="display === true">
     <li class="list-group-item">Details: {{ meal.details }}</li>
     <li class="list-group-item">Calories: {{ meal.calories }}</li>
