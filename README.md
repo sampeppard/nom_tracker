@@ -23,14 +23,10 @@ An application meant to track meals and calories built with Angular2 and Gulp.js
 ----
 ### **Setup/Installation Requirements**
 
-Link to GitHub pages site:
-
-
-
 If editing:
 * Clone this repository: https://github.com/sampeppard/nom_tracker.git
 * OPEN project folder ('nom_tracker') in Code Editor of choice
---then--
+#
 * Run following commands from command line
 * 1. npm install
 * 2. bower install
