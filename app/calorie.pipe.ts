@@ -8,7 +8,7 @@ import { Meal } from './meal.model';
 
 export class CaloriePipe implements PipeTransform {
   transform(input: Meal[], desiredCalories) {
-    var output: Meal = [];
+    var output: Meal[] = [];
     if (desiredCalories === "high-calorie") {
       for (var i = 0; i < input.length; i++) {
         if (input[i].calories >= 500) {

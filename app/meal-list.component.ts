@@ -5,7 +5,7 @@ import { Meal } from './meal.model';
   selector: "meal-list",
   template: `
   <p>Filter meals by caloric amount.</p>
-  <select class="form-control" (change)="onCalorieChange($event.target.value)">
+  <select class="form-control calorie-range" (change)="onCalorieChange($event.target.value)">
     <option value="all">All Meals</option>
     <option value="high-calorie">High Calorie Meals</option>
     <option value="low-calorie">Low Calorie Meals</option>

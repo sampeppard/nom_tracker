@@ -1,9 +1,23 @@
 
+/*--------------Base Styles--------------*/
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Oswald', sans-serif;
 }
+
+/*--------------Bootstrap Custom Overrides--------------*/
+
+.container {
+  margin-bottom: 300px;
+}
+
+.list-group {
+  margin: 5px 0;
+}
+
+/*--------------Header Styles--------------*/
 
 header {
   width: 100%;
@@ -13,13 +27,7 @@ header {
   color: beige;
 }
 
-.container {
-  margin-bottom: 300px;
-}
-
-.list-group {
-  margin: 5px 0;
-}
+/*--------------Main Styles--------------*/
 
 .add-meals {
   border-radius: 10px;
@@ -45,6 +53,12 @@ header {
 .meal {
   margin-right: 5px;
 }
+
+.calorie-range {
+  width:75%;
+}
+
+/*--------------Footer Styles--------------*/
 
 footer {
   position: fixed;
