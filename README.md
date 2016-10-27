@@ -27,11 +27,11 @@ If editing or running locally:
 
 ##### First, make sure the following is installed on your machine
 
-1. make sure you have npm installed - check link below for installation
+###### make sure you have npm installed - check link below for installation
 
 ##### https://nodejs.org/en/download/
 
-2. make sure you have gulp and bower installed globally
+###### make sure you have gulp and bower installed globally
 
 ##### run `npm install bower gulp -g` to install both
 
