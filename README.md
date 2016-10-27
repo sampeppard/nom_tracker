@@ -25,19 +25,21 @@ An application meant to track meals and calories built with Angular2 and Gulp.js
 
 If editing or running locally:
 
-##### First, make sure the following is installed on your machine
+##### 1. First, make sure the following is installed on your machine
 
-###### make sure you have npm installed - check link below for installation
+##### 2. make sure you have npm installed - check link below for installation
 
-##### https://nodejs.org/en/download/
+https://nodejs.org/en/download/
 
-###### make sure you have gulp and bower installed globally
+##### 3. make sure you have gulp and bower installed globally
 
-##### run `npm install bower gulp -g` to install both
+run `npm install bower gulp -g` to install both
 
-* Clone this repository: https://github.com/sampeppard/nom_tracker.git
-* OPEN project folder ('nom_tracker') in Code Editor of choice
-#
+###### then
+
+Clone this repository: https://github.com/sampeppard/nom_tracker.git
+OPEN project folder ('nom_tracker') in Code Editor of choice
+
 * Run following commands from command line
 * 1. npm install
 * 2. bower install
