@@ -29,11 +29,11 @@ If editing or running locally:
 
 1. make sure you have npm installed - check link below for installation
 
-####### https://nodejs.org/en/download/
+##### https://nodejs.org/en/download/
 
 2. make sure you have gulp and bower installed globally
 
-####### run `npm install bower gulp -g` to install both
+##### run `npm install bower gulp -g` to install both
 
 * Clone this repository: https://github.com/sampeppard/nom_tracker.git
 * OPEN project folder ('nom_tracker') in Code Editor of choice
