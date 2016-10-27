@@ -27,7 +27,8 @@ export class NewMealComponent {
   @Input() childMealList: Meal[];
   @Output() newMealSender = new EventEmitter();
   addClicked(name: string, details: string, calories: string) {
-    var newMeal: Meal = new Meal(name, details, calories);
+    var parsedCalories = parseInt(calories);
+    var newMeal: Meal = new Meal(name, details, parsedCalories);
     this.newMealSender.emit(newMeal);
   }
 }

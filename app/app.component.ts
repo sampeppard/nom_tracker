@@ -45,11 +45,16 @@ import { Meal } from './meal.model';
 
 export class AppComponent {
   public masterMealList: Meal[] = [
-    new Meal("Fajitas", "Lean chicken", "850"),
-    new Meal("Turkey Burger", "Made with lean ground turkey", "450"),
-    new Meal("Chicken Tikka Masala", "Lean chicken", "750")
+    new Meal("Fajitas", "Lean chicken", 850),
+    new Meal("Turkey Burger", "Made with lean ground turkey", 450),
+    new Meal("Chicken Tikka Masala", "Lean chicken", 750)
   ];
   selectedMeal: Meal = null;
+  public total: number = 0;
+
+  ngOnInit() {
+    this.countCalories();
+  }
   showDetails(clickedMeal: Meal) {
     this.selectedMeal = clickedMeal;
   }
@@ -61,13 +66,10 @@ export class AppComponent {
     this.countCalories();
   }
 
-  public total: number = 2050;
-
-
   countCalories() {
     this.total = 0;
     for (var i = 0; i < this.masterMealList.length; i++) {
-      this.total += parseInt(this.masterMealList[i].calories);
+      this.total += this.masterMealList[i].calories;
     }
   }
 

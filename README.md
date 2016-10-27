@@ -33,7 +33,6 @@ If editing:
 * 3. gulp build
 * 4. gulp serve
 
-
 ----
 
 ### **Known Bugs**
