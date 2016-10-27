@@ -37,8 +37,8 @@ run `npm install bower gulp -g` to install both
 
 ###### then
 
-Clone this repository: https://github.com/sampeppard/nom_tracker.git
-OPEN project folder ('nom_tracker') in Code Editor of choice
+#### Clone this repository: https://github.com/sampeppard/nom_tracker.git
+#### OPEN project folder ('nom_tracker') in Code Editor of choice
 
 * Run following commands from command line
 * 1. npm install
