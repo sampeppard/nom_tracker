@@ -45,9 +45,9 @@ import { Meal } from './meal.model';
 
 export class AppComponent {
   public masterMealList: Meal[] = [
-    new Meal("Fajitas", "Lean chicken", 850),
-    new Meal("Turkey Burger", "Made with lean ground turkey", 450),
-    new Meal("Chicken Tikka Masala", "Lean chicken", 750)
+    // new Meal("Fajitas", "Lean chicken", 850),
+    // new Meal("Turkey Burger", "Made with lean ground turkey", 450),
+    // new Meal("Chicken Tikka Masala", "Lean chicken", 750)
   ];
   selectedMeal: Meal = null;
   public total: number = 0;
@@ -60,6 +60,8 @@ export class AppComponent {
   }
   finshedEditing() {
     this.selectedMeal = null;
+    console.log(this.total);
+    this.countCalories();
   }
   addMeal(newMealAdded: Meal) {
     this.masterMealList.push(newMealAdded);
