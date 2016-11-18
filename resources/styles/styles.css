@@ -22,6 +22,7 @@ body {
 header {
   width: 100%;
   padding: 20px;
+  border-bottom: solid 1px #000000;
   font-family: 'Montserrat Subrayada', sans-serif;
   background-color: teal;
   color: beige;
@@ -97,7 +98,14 @@ footer {
   margin-top: 100px;
   width: 100%;
   padding: 10px 0;
+  border-top: solid 1px #000000;
   text-align: center;
   background-color: teal;
   color: beige;
+}
+
+/*--------------BEM Styles--------------*/
+
+.btn--margin-bottom {
+  margin-bottom: 10px;
 }
