@@ -49,8 +49,8 @@ header {
 
 .edit-meal {
   position: absolute;
-  width: 40%;
-  margin: 10% 30%;
+  width: 80%;
+  margin: 10% 10%;
   justify-content: center;
   padding: 0 15px 15px 15px;
   z-index: 1;
@@ -58,12 +58,19 @@ header {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
-  box-shadow: 3px 3px 3px beige;
-  -webkit-box-shadow: 3px 3px 3px beige;
-  -moz-box-shadow: 3px 3px 3px beige;
-  -ms-box-shadow: 3px 3px 3px beige;
+  box-shadow: 1px 1px 18px 9px beige;
+  -webkit-box-shadow: 1px 1px 18px 9px beige;
+  -moz-box-shadow: 1px 1px 18px 9px beige;
+  -ms-box-shadow: 1px 1px 18px 9px beige;
   background-color: teal;
   color: beige;
+}
+
+@media screen and (min-width: 768px) {
+  .edit-meal {
+    width: 40%;
+    margin: 10% 30%;
+  }
 }
 
 .listed-meal {
