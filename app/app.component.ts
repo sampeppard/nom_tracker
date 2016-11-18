@@ -4,6 +4,10 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'my-app',
   template: `
+    <edit-meal
+      [childSelectedMeal]="selectedMeal"
+      (doneClickedSender)="finshedEditing()"
+    ></edit-meal>
     <header>
       <h1>NOM Tracker</h1>
     </header>
@@ -22,10 +26,6 @@ import { Meal } from './meal.model';
             (clickSender)="showDetails($event)"
           ></meal-list>
           <br>
-          <edit-meal
-            [childSelectedMeal]="selectedMeal"
-            (doneClickedSender)="finshedEditing()"
-          ></edit-meal>
         </div>
         <div class="col-sm-6 add-meals">
           <br>
